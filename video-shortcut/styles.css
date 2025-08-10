@@ -15,8 +15,14 @@
   transition: opacity 0.3s ease;
 }
 
-#netflix-shortcuts-overlay.netflix-shortcuts-hidden,
-#abema-shortcuts-overlay.abema-shortcuts-hidden,
+#netflix-shortcuts-overlay.netflix-shortcuts-hidden {
+  display: none;
+}
+
+#abema-shortcuts-overlay.abema-shortcuts-hidden {
+  display: none;
+}
+
 #youtube-shortcuts-overlay.youtube-shortcuts-hidden {
   display: none;
 }
