@@ -1,21 +1,31 @@
 {
   "manifest_version": 3,
-  "name": "Netflix Shortcuts",
+  "name": "Video Platform Shortcuts",
   "version": "1.0",
-  "description": "Show keyboard shortcuts for Netflix",
+  "description": "Show keyboard shortcuts for Netflix, Abema TV, and YouTube",
   "permissions": [
     "activeTab"
   ],
   "content_scripts": [
     {
       "matches": ["*://*.netflix.com/*"],
-      "js": ["content.js"],
+      "js": ["netflix.js"],
+      "css": ["styles.css"]
+    },
+    {
+      "matches": ["*://*.abema.tv/*"],
+      "js": ["abema.js"],
+      "css": ["styles.css"]
+    },
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["youtube.js"],
       "css": ["styles.css"]
     }
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Netflix Shortcuts"
+    "default_title": "Video Platform Shortcuts"
   },
   "icons": {
     "16": "icon16.png",

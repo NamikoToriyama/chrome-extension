@@ -1,4 +1,6 @@
-#netflix-shortcuts-overlay {
+#netflix-shortcuts-overlay,
+#abema-shortcuts-overlay,
+#youtube-shortcuts-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +15,9 @@
   transition: opacity 0.3s ease;
 }
 
-#netflix-shortcuts-overlay.netflix-shortcuts-hidden {
+#netflix-shortcuts-overlay.netflix-shortcuts-hidden,
+#abema-shortcuts-overlay.abema-shortcuts-hidden,
+#youtube-shortcuts-overlay.youtube-shortcuts-hidden {
   display: none;
 }
 
@@ -27,10 +31,26 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
-.shortcuts-content h3 {
+#netflix-shortcuts-overlay .shortcuts-content h3 {
   margin: 0 0 20px 0;
   text-align: center;
   color: #e50914;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#abema-shortcuts-overlay .shortcuts-content h3 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: #00d4ff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#youtube-shortcuts-overlay .shortcuts-content h3 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: #ff0000;
   font-size: 24px;
   font-weight: bold;
 }
