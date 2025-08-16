@@ -22,6 +22,11 @@
       "matches": ["*://*.youtube.com/*"],
       "js": ["youtube.js"],
       "css": ["styles.css"]
+    },
+    {
+      "matches": ["*://*.amazon.com/*/video/*", "*://*.amazon.co.jp/*/video/*"],
+      "js": ["amazon.js"],
+      "css": ["styles.css"]
     }
   ],
   "action": {

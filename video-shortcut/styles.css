@@ -1,6 +1,7 @@
 #netflix-shortcuts-overlay,
 #abema-shortcuts-overlay,
-#youtube-shortcuts-overlay {
+#youtube-shortcuts-overlay,
+#amazon-shortcuts-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,6 +25,10 @@
 }
 
 #youtube-shortcuts-overlay.youtube-shortcuts-hidden {
+  display: none;
+}
+
+#amazon-shortcuts-overlay.amazon-shortcuts-hidden {
   display: none;
 }
 
@@ -57,6 +62,14 @@
   margin: 0 0 20px 0;
   text-align: center;
   color: #ff0000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#amazon-shortcuts-overlay .shortcuts-content h3 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: #00a8e1;
   font-size: 24px;
   font-weight: bold;
 }

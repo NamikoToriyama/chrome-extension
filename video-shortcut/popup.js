@@ -55,11 +55,31 @@ const shortcutsData = {
       { key: 'Enter', action: 'Next episode' }
     ]
   },
+  amazon: {
+    title: "Amazon Prime Video Shortcuts",
+    color: "#00a8e1",
+    shortcuts: [
+      { key: 'Space', action: 'Play/Pause' },
+      { key: 'F', action: 'Fullscreen' },
+      { key: 'Esc', action: 'Exit fullscreen' },
+      { key: '←', action: 'Rewind 10s' },
+      { key: '→', action: 'Fast forward 10s' },
+      { key: '↑', action: 'Volume up' },
+      { key: '↓', action: 'Volume down' },
+      { key: 'M', action: 'Mute/Unmute' },
+      { key: 'C', action: 'Toggle captions' },
+      { key: 'T', action: 'Toggle audio description' },
+      { key: 'Shift+←', action: 'Previous episode' },
+      { key: 'Shift+→', action: 'Next episode' },
+      { key: 'Home', action: 'Go to beginning' },
+      { key: 'End', action: 'Go to end' }
+    ]
+  },
   default: {
     title: "Video Platform Shortcuts",
     color: "#888888",
     shortcuts: [
-      { key: '?', action: 'Toggle shortcuts on Netflix, YouTube, or Abema TV' }
+      { key: '?', action: 'Toggle shortcuts on Netflix, YouTube, Abema TV, or Amazon Prime Video' }
     ]
   }
 };
@@ -68,6 +88,7 @@ function detectPlatform(url) {
   if (url.includes('netflix.com')) return 'netflix';
   if (url.includes('youtube.com')) return 'youtube';
   if (url.includes('abema.tv')) return 'abema';
+  if (url.includes('amazon.com') && url.includes('video')) return 'amazon';
   return 'default';
 }
 
@@ -88,7 +109,7 @@ function renderShortcuts(platform) {
   
   const tip = document.querySelector('.tip');
   if (platform === 'default') {
-    tip.textContent = 'Visit Netflix, YouTube, or Abema TV to see platform-specific shortcuts';
+    tip.textContent = 'Visit Netflix, YouTube, Abema TV, or Amazon Prime Video to see platform-specific shortcuts';
   } else {
     tip.innerHTML = '💡 Press "?" on the page to toggle overlay';
   }
