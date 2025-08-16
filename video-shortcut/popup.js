@@ -88,7 +88,7 @@ function detectPlatform(url) {
   if (url.includes('netflix.com')) return 'netflix';
   if (url.includes('youtube.com')) return 'youtube';
   if (url.includes('abema.tv')) return 'abema';
-  if (url.includes('amazon.com') && url.includes('video')) return 'amazon';
+  if (url.includes('amazon.co') && url.includes('gp/video')) return 'amazon';
   return 'default';
 }
 

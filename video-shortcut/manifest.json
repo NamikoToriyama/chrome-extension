@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Video Platform Shortcuts",
   "version": "1.0",
-  "description": "Show keyboard shortcuts for Netflix, Abema TV, and YouTube",
+  "description": "Show keyboard shortcuts for Netflix, YouTube, Abema TV, and Amazon Prime Video",
   "permissions": [
     "activeTab",
     "tabs"
@@ -24,7 +24,7 @@
       "css": ["styles.css"]
     },
     {
-      "matches": ["*://*.amazon.com/*/video/*", "*://*.amazon.co.jp/*/video/*"],
+      "matches": ["*://*.amazon.co.jp/gp/video/*"],
       "js": ["amazon.js"],
       "css": ["styles.css"]
     }
